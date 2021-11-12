@@ -15,3 +15,9 @@ make -C docs html
 
 open docs/_build/html/example_package.html
 ```
+
+To run a live server:
+
+```sh
+make -C docs livehtml
+```
