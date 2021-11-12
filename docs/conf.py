@@ -71,6 +71,6 @@ intersphinx_mapping = {
     "requests": ("https://docs.python-requests.org/en/latest/", None),
 }
 
-autodoc_preserve_defaults = True
+# autodoc_preserve_defaults = True
 
 nitpicky = True
