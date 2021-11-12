@@ -1,10 +1,15 @@
+import functools
 import requests
 import http
+import sys
+
+from typing import IO
 
 
 def example_function(
     response: requests.Response,
     status: http.HTTPStatus,
+    stream: IO[str] = sys.stdout,
 ) -> requests.Request:
     """
     Example function using :mod:`requests`.
@@ -21,6 +26,7 @@ def example_function(
 
     :param response: A :class:`requests.Response` instance.
     :param status: An :class:`http.HTTPStatus` instance.
+    :param stream: A :class:`typing.IO` instance.
 
     :return: A :class:`requests.Request` instance.
 
@@ -28,3 +34,7 @@ def example_function(
     """
     response.raise_for_status()
     return response.request
+
+
+#: Example partial with default value for ``status``.
+example_partial = functools.partial(example_function, status=http.HTTPStatus.ACCEPTED)
