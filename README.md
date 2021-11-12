@@ -11,7 +11,7 @@ In an active virtual environment:
 ```sh
 pip install -r requirements.txt
 
-make -c docs html
+make -C docs html
 
 open docs/_build/html/example_package.html
 ```

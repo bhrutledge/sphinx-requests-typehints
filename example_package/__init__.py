@@ -11,9 +11,9 @@ def example_function(
 
     It looks like :doc:`autodoc <usage/extensions/autodoc>` is resolving type hints like
     ``requests.Response`` to their internal definition, e.g.
-    ``requests.models.Response``. This means the :doc:`intersphinx
-    <usage/extensions/intersphinx>` references don't work, resulting in build messages
-    like ``WARNING: py:class reference target not found: requests.models.Response``.
+    ``requests.models.Response``. This `caused an issue
+    <https://github.com/psf/requests/issues/5954>`_ (now fixed) with :doc:`intersphinx
+    <usage/extensions/intersphinx>` references.
 
     For comparison, this function includes type hints for the Python standard library
     and explicit references to the public APIs via `interphinx-untangled
